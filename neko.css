@@ -1,0 +1,612 @@
+@import url("neko.css");
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+
+        -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
+}
+h1,h2,h3,h4,h5,h6,span,p,a,input,button,div{
+	font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
+	text-decoration: none;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+
+   -webkit-overflow-scrolling: touch;  
+	
+	background-color:#f1e6db;
+}
+
+img{
+    display: block;
+}
+
+#moblie_menu{
+	display: none;
+}
+/*一開始要先把預用的展開menu給藏起來，所以要下display:none;*/
+
+
+
+
+#app{
+	width: 680px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: #faf1e3;
+}
+
+
+
+
+#app > header{
+width: 100%;
+height: auto;
+}
+
+#app > header > h1 >img{
+	display: block;
+	margin: 0 auto;
+	padding-bottom:30px;
+	padding-top: 40px;
+	width: 20%;
+	height: 20%;
+}
+
+
+
+#app > nav > div{
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 660px;
+	height: 100%;
+}
+
+#app > nav > div > a{
+	display: block;
+	overflow: hidden;
+		float: left;
+	font-size: 25px;
+	line-height:85px;
+
+	text-decoration: overline;
+	padding: 0 30px;
+	color: #333;
+
+	}
+
+#app > nav > div > a:hover{
+
+		color: #dccec0;
+
+	}
+
+
+#app > div.hold{
+
+	display: block;
+	margin: 0 auto;
+
+	width: 600px;
+	height: auto;
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+.hold > img{
+	border:3px solid #FFF;
+	display:block;
+	float: left;
+
+}
+
+
+aside.text{
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 55px;
+
+}
+
+
+aside.text > h2{
+
+	font-size: 24px;
+	line-height: 95px;
+	color: #666;
+
+}
+
+
+aside.text > p{
+	font-size: 15px;
+	line-height: 25px;
+	color: #666;
+	padding-top: 10px;
+}
+
+
+.photoBox {
+	display:block;
+	margin: 20px auto;
+	width: 600px;
+	height: 400px;
+}
+
+
+.photoBox > .photoMid {
+	width:100%;
+	height: auto;
+
+}
+
+.photoBox > .photoMid > li {
+	float: left;
+	width: 200px;
+	height: 200px;
+	display: block;
+	text-align: center;
+}
+
+.photoBox > .photoMid > li > h4{
+	display: block;
+	margin:0 auto;
+	width: 130px;
+	height:auto;
+	overflow:hidden;
+	font-size: 10px;
+	color: #666;
+	line-height:20px;	
+	
+} 
+
+.photoBox > .photoMid > li > img{
+	display: block;
+	margin:0 auto;
+	padding-bottom: 10px;
+
+}
+
+
+.qrcode{
+	width: 100%;
+	height: auto;
+
+}
+
+
+.qrcode > img{
+	width: 30%;
+	height: 30%;
+	display: block;
+	margin:0 auto;
+	padding-bottom: 50px;
+
+}
+
+
+.followIcon > p{
+	line-height: 50px;
+	text-align: center;
+	color: #999;
+	font-size: 15px;
+	background-color: #FFF;
+
+
+}
+
+.followIcon > ul{
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 200px;
+	height: 90px;
+
+
+}
+
+
+.followIcon > ul >li{
+	display: block;
+	width: 15px;
+	height: auto;
+	float: left;
+	padding: 20px 30px 20px 30px;
+
+
+	
+}
+
+.followIcon > ul >li > a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%; 
+}
+
+
+.f_fb{background-image: url('images/facebook.png')}
+.f_tw{background-image: url('images/gmail.png')}
+.f_ig{background-image: url('images/instagram.png')}
+
+#backtop {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+
+	}
+
+
+#backtop > a {
+
+		width: 100%;
+	overflow: hidden;
+
+}
+
+#backtop > a > img{
+		display: block;
+		margin: 0 auto;
+
+		width: 65px;
+	height: 65px;
+
+}
+
+
+
+
+/*----------------------------------------------------------------*/
+
+
+
+@media screen and (max-width: 650px) {
+
+#app{
+	width: 100%;
+	height: auto;
+
+}
+
+
+#app > header > h1 >img{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	width: 25%;
+	height: 25%;
+}
+
+#app > nav > div{
+display: block;
+margin: 0 auto;
+	width:520px;
+	height: auto;
+}
+
+#app > nav > div > a{
+	display: block;
+	overflow: hidden;
+		float: left;
+	font-size: 21px;
+	line-height:75px;
+
+	text-decoration: overline;
+	padding: 0 19px;
+	color: #333;
+
+	}
+
+#app > div.hold{
+
+	width: 520px;
+	height: auto;
+	padding-top: 10px;
+
+
+}
+
+.hold > img{
+
+	border:2px solid #FFF;
+	width: 32%;
+	height: 32%;
+
+
+}
+
+aside.text{
+
+	width: 80%;
+	height: auto;
+	overflow: hidden;
+
+}
+
+
+aside.text > h2{
+
+	font-size: 20px;
+	line-height: 95px;
+	color: #666;
+	padding-top: 35px;
+
+}
+
+
+aside.text > p{
+	font-size: 14px;
+	line-height: 30px;
+	color: #666;
+	padding-top: 5px;
+}
+
+
+.photoBox {
+	display:block;
+	overflow: hidden;
+	margin: 20px auto;
+	width: 400px;
+	height: auto;
+	margin-bottom: 80px;
+
+}
+
+
+.photoBox > .photoMid {
+
+	width:100%;
+	height: auto;
+
+}
+
+.photoBox > .photoMid > li {
+	float: left;
+	width: 200px;
+	height: 200px;
+	display: block;
+	text-align: center;
+}
+
+.photoBox > .photoMid > li > h4{
+	display: block;
+	margin:0 auto;
+	width: 130px;
+	height:auto;
+	overflow:hidden;
+	font-size: 10px;
+	color: #666;
+	line-height:20px;	
+	
+} 
+
+.photoBox > .photoMid > li > img{
+	display: block;
+	margin:0 auto;
+	padding-bottom: 10px;
+
+}
+
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+
+
+#moblie_menu{
+	display: block;
+	width: 100%;
+	height: 58px;
+	background-image: url('./images/menu.jpg');
+	background-color: #faf1e3;
+	background-size: 65px 58px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	}
+
+
+
+#app > nav {
+	transition: height 0.9s;
+	height: 58px;
+	overflow: hidden;
+
+
+}
+
+/* 在nav旁單獨特別下一個.open的class是針對點擊下拉的js function 去設的獨立class，不用在html那下什麼東西，會由js檔的function去下指令觸發，不能在html的nav下，會變成一開始就"展開"menu了*/
+#app > nav.open{
+	height: 245px;
+/* height要有一個明確的高度才能讓transition的動態設計產生效果*/
+}
+
+#app > nav > div{
+
+   	border-width:10px; 
+   	border-style:double;
+   	border-color: #FFF;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: #f1e6db;
+	overflow: hidden;
+	
+}
+
+#app > nav > div > a{
+
+		float: none;
+		font-size: 5vw;
+		width: 100%;
+		height: auto;
+	line-height:10vw;
+	text-decoration:none;
+	color: #666;
+	}
+
+
+#app > header{
+width: 100%;
+height: auto;
+
+}
+
+#app > header > h1 >img{
+	display: block;
+	width: 35%;
+	height: 35%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-top: 30px;
+}
+
+
+
+#app > div.hold{
+	width: 100%;
+	height: 100%;
+	padding-top: 5px;
+
+}
+
+.hold > img{
+
+	border:2px solid #FFF;
+	width: 33%;
+	height: 33%;
+
+
+}
+
+aside.text{
+
+	width: 90%;
+	height: auto;
+	padding-top: 5px;
+
+}
+
+
+aside.text > h2{
+
+	font-size:4.8vw;
+	line-height: 7.5vw;
+	color: #666;
+
+
+}
+
+
+aside.text > p{
+	font-size: 3.8vw;
+	line-height: 5.8vw;
+	color: #666;
+	padding-top: 25px;
+}
+
+
+.photoBox {
+
+	display: block;
+	margin: 0 auto;
+	width: 320px;
+	height: auto;
+	margin-bottom: 80px;
+	overflow: hidden;
+
+}
+
+
+.photoBox > .photoMid > li {
+	display: block;
+	float: left;
+	width: 160px;
+	height: 200px;
+
+	text-align: center;
+	margin-top: 20px;
+
+}
+
+.photoBox > .photoMid > li > h4{
+
+	width: 120px;
+	height:auto;
+	overflow:hidden;
+	font-size: 3.5vw;
+	font-weight: 400;
+	color: #777;
+
+	
+} 
+
+.photoBox > .photoMid > li > img{
+	display: block;
+	margin:0 auto;
+	padding-bottom: 10px;
+
+}
+
+.qrcode{
+	width: 100%;
+	height: auto;
+
+}
+
+
+.qrcode > img{
+	width: 40%;
+	height: 40%;
+	display: block;
+	margin:0 auto;
+	padding-bottom: 70px
+}
+
+
+.followIcon{
+	display: block;
+	padding-bottom: 35px;
+}
+
+
+.followIcon > p{
+	line-height: 70px;
+	text-align: center;
+	color: #999;
+	font-size: 3.75vw;
+	background-color: #FFF;
+
+
+
+}
+
+.followIcon > ul {
+	padding-top: 25px;	
+
+}
+
+
+
+
+}
+
+
+
+
