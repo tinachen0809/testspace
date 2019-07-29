@@ -517,7 +517,7 @@ aside.text > h2{
 
 aside.text > p{
 	font-size: 3.8vw;
-	line-height: 5.8vw;
+	line-height: 6vw;
 	color: #666;
 	padding-top: 25px;
 }
@@ -604,10 +604,73 @@ aside.text > p{
 }
 
 
+}
 
+
+
+@media screen and (max-width: 320px) {
+
+
+
+aside.text > p{
+	font-size: 3.8vw;
+	line-height: 6vw;
+	color: #666;
+	padding-top: 25px;
+}
+
+
+.photoBox > .photoMid{
 
 }
 
 
+.photoBox {
+
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: auto;
+	margin-bottom: 70px;
+	overflow: hidden;
+
+}
+
+
+.photoBox > .photoMid > li {
+	display: block;
+	float: none;
+	margin: 0 auto;
+	width: 160px;
+	height: auto;
+
+	text-align: center;
+	margin-top: 20px;
+
+}
+
+
+.photoBox > .photoMid > li > h4{
+
+	width: 120px;
+	height:auto;
+	overflow:hidden;
+	font-size: 4vw;
+	font-weight: 400;
+	color: #777;
+
+	
+} 
+
+.photoBox > .photoMid > li > img{
+	display: block;
+	margin:0 auto;
+	padding-bottom: 10px;
+
+}
+
+
+
+}
 
 
