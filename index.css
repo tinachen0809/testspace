@@ -575,8 +575,7 @@ footer > p {
 }
 
 	#app > header > nav > h1 > img{
-	position:absolute;  /* 把logo的階層設在最上*/
-	z-index:999; 
+
 	height: auto;
 	width: 35%;
 	padding: 0 0 ;
@@ -589,7 +588,7 @@ footer > p {
 	display: block;
 	width: 55px;
 	height: 55px;
-	background-image: url('/sketch_webdesign/images/omenu.jpg');
+	background-image: url('../sketch_webdesign/images/omenu.jpg');
 	background-repeat: no-repeat;
 	float: right;
 }
