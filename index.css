@@ -564,7 +564,7 @@ footer > p {
 
 }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 715px) {
 
 
 	#app > header > nav > h1{
@@ -589,7 +589,7 @@ footer > p {
 	display: block;
 	width: 55px;
 	height: 55px;
-	background-image: url('/sketch_webdesign/images/omenu.png');
+	background-image: url('/sketch_webdesign/images/omenu.jpg');
 	background-repeat: no-repeat;
 	float: right;
 }
