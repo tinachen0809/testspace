@@ -1,0 +1,773 @@
+@import url("./reset.css");
+
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+
+html,body{
+font-family: "arial", "helvetica", "sans-serif";
+text-decoration: none;
+-webkit-text-size-adjust:none; 
+background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6,span,p,a,input,button,div{
+	font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
+	text-decoration: none;
+}
+img{
+	display: block;
+}
+
+a:visited{
+
+color:#fff;
+}
+
+/*加入戴入時的微動畫*/
+@keyframes Animate1 {
+    from {
+        transform: scale(0.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+
+#app{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+
+
+}
+
+
+#menubtn{
+	display: none;
+}
+
+
+
+
+#app > header{
+	display: block;
+	width: 100%;
+	height: auto;
+
+}
+
+#app > header > nav{
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+
+}
+
+
+#app > header > nav > h1{
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding-left: 35px;
+}
+
+#app > header > nav > h1 > img{
+
+	position:absolute;  /* 把logo的階層設在最上*/
+	z-index:999; 
+	height: auto;
+	width: 20%;
+	padding-top: 20px;
+
+}
+
+#app > header > nav > div.menu {
+	display: block;
+	float: right;
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+
+
+}
+
+#app > header > nav > div > a {
+line-height: 110px;
+color: #FFF;
+font-size: 1.5vw;
+padding: 0 20px;
+text-align: center;
+float: right;
+
+}
+
+
+div.bn > img {
+
+	width: 100%;
+	height: 100%;
+	margin-bottom: 50px;
+
+	/*加入戴入時的微動畫*/
+	animation: Animate1 .6s;
+
+
+
+}
+
+div.bn_two >img{
+
+	width: 65%;
+	height: auto;
+
+	margin-bottom: 50px;
+	margin: 0 auto;
+
+
+
+}
+
+
+
+
+
+
+article{
+	width: 65%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 90px;
+	padding-bottom: 30px;
+	border-bottom: 3px solid #666;
+
+}
+
+article > h2{
+
+font-size: 3vw;
+color: #FFF;
+line-height: 70px;
+text-align: center;
+padding-bottom: 50px;
+
+}
+
+article > div.box{
+	width: 100%;
+	height: auto;
+
+
+}
+
+
+article > div.box > ul{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+
+}
+
+article > div.box > ul > li{
+	
+	overflow: hidden;
+
+
+}
+
+
+article > div.box > ul > li > img{
+	width: 30%;
+	height: 30%;
+	display: block;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 25px;
+
+
+
+/*加入一段transition動畫，讓滑鼠移過去時方變成圓*/
+	transition: all 0.3s ease-out;
+}
+/*加入一段transition動畫，讓滑鼠移過去時方變成圓*/
+article > div.box > ul > li > img:hover{
+	border-radius: 50%;
+	}
+
+
+
+
+article > div.box > ul > li > h4{
+	width:65%;
+	height: auto;
+	color: #666;
+	font-size: 1.5vw;
+	line-height: 30px;
+	float: left;
+
+}
+
+div.aboutme{
+	width: 100%;
+	height:auto;
+	background-color: #333;
+	overflow: hidden;
+
+
+	/*margin-top是為了給下面輪播影片撐開一個高度給它用，它的定位被鎖住了 */
+	margin-top: 650px;
+
+}
+
+div.aboutme > img{
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+div.textbox{
+	overflow: hidden;
+	width: 68%;
+	height: auto;
+	float: left;
+	text-align: left;
+
+}
+
+
+div.aboutme > div.textbox > h5 {
+	display: block;
+	overflow: hidden;
+	float: left;
+	margin: 30px 0px 0px 40px;
+	padding-right: 20px;
+
+	border-right: #999 1px dotted;	
+
+
+}
+
+div.aboutme > div.textbox > h5 > p {
+color: #999;
+font-size: 1.1vw;
+line-height: 33px;
+}
+
+footer{
+width: 100%;
+height: 80px;
+overflow: hidden;
+
+}
+footer > div.icon {
+width: 40%;
+height: auto;
+color: #FFF;
+padding: 20px 20px 20px 20px;
+float: left;
+
+}
+
+footer > div.icon > a > i {
+
+	display: block;
+	padding: 0 10px;
+	float: left;
+
+}
+
+footer > p {
+	display: block;
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+	color: #333;
+	font-size: 15px;
+	float: right;
+	text-align: right;	
+	padding: 20px 20px 20px 20px;
+
+	
+}
+
+/*輪播圖片效果*/
+
+
+
+.slider_container {
+	margin: 0 auto;
+    width: 500px;
+    height: auto;
+    position: relative;
+    background-color: #f5f5f5;
+
+
+}
+
+
+.slider_container div > img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+/*輪播圖上的字  其他作品展示*/
+.text_p {
+
+	display:block;
+	color: #FFF;
+	overflow: hidden;
+	font-size: 3vw;
+	text-align: center;
+	line-height: 60px;
+
+	margin-bottom: 30px;
+}
+
+.slider_container div {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity:0);
+
+
+
+}
+
+
+
+.slider_container div {
+    -webkit-animation: round 25s linear infinite;
+            animation: round 25s linear infinite;
+}
+
+@-webkit-keyframes round {
+    4% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    24% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    4% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    24% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+
+.slider_container div:nth-child(5) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+.slider_container div:nth-child(4) {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+}
+
+.slider_container div:nth-child(3) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+}
+
+
+.slider_container div:nth-child(2) {
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+}
+
+.slider_container div:nth-child(1) {
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+}
+
+
+.slider_container span {    
+    color: #fff;
+    background: #000;
+    position: absolute;
+    left: 0%;
+    top: 310px;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+
+    -webkit-transform:scaleY(0);
+        -ms-transform:scaleY(0);
+            transform:scaleY(0);
+    -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+}
+
+.slider_container:hover span {
+    width: 100%;
+    -webkit-transform:scaleY(1);
+        -ms-transform:scaleY(1);
+            transform:scaleY(1);
+}
+
+
+.slider_container:hover div {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+/*輪播圖片效果*/
+
+
+
+
+
+
+
+@media screen and (max-width: 1025px) {
+
+
+	#app > header > nav > h1 > img{
+	position:absolute;  /* 把logo的階層設在最上*/
+	z-index:999; 
+	height: auto;
+	width: 30%;
+	padding-top: 20px;
+
+
+	}
+
+	#app > header > nav > div.menu {
+		display: block;
+		float: right;
+		width: 70%;
+		height: auto;
+		overflow: hidden;
+
+	}
+
+	#app > header > nav > div > a {
+	line-height: 110px;
+	color: #FFF;
+	font-size: 2vw;
+	padding: 0 10px;
+	text-align: center;
+	float: right;
+	}
+
+
+
+	article > h2{
+
+	font-size: 4vw;
+	color: #FFF;
+	line-height: 40px;
+	text-align: center;
+	padding-bottom: 60px;
+
+	}
+
+
+
+	article > div.box > ul > li > h4{
+	width:65%;
+	height: auto;
+	color: #666;
+	font-size: 1.8vw;
+	line-height: 27px;
+	float: left;
+
+}
+
+
+
+	div.aboutme{
+	width: 100%;
+	height:auto;
+	background-color: #333;
+	overflow: hidden;
+
+}
+
+div.textbox{
+	overflow: hidden;
+	width: 70%;
+	height: auto;
+	float: left;
+	text-align: left;
+
+}
+
+
+div.aboutme > div.textbox > h5 {
+	display: block;
+	overflow: hidden;
+	float: left;
+	margin: 20px 0px 10px 40px;
+	border:none;	
+
+
+}
+
+div.aboutme > div.textbox > h5 > p {
+color: #999;
+font-size: 1.7vw;
+line-height: 30px;
+}
+
+footer > p {
+	display: block;
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+	color: #333;
+	font-size: 10px;
+	float: right;
+	text-align: right;	
+	padding: 20px 20px 20px 20px;
+
+	
+}
+
+
+
+}
+
+@media screen and (max-width: 640px) {
+
+
+	#app > header > nav > h1{
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 20px 0 0 20px ;
+}
+
+	#app > header > nav > h1 > img{
+	position:absolute;  /* 把logo的階層設在最上*/
+	z-index:999; 
+	height: auto;
+	width: 35%;
+	padding: 0 0 ;
+
+
+	}
+
+#menubtn {
+
+	display: block;
+	width: 55px;
+	height: 55px;
+	background-image: url('/sketch_webdesign/images/omenu.png');
+	background-repeat: no-repeat;
+	float: right;
+}
+
+#app > header > nav > div.menu {
+	display: none;
+	/* 把menu還殘留的滑鼠移過去會有隱藏的連結給關掉*/
+}
+
+#app > header > nav{
+	transition: height 1s;
+	height: 55px;
+
+	overflow: hidden;
+/* 把menu那區給縮起來符合旁邊的收合清單顯示圖的高度*/
+
+}
+
+
+
+div.bn > img {
+
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+div.bn_two >img{
+
+	width: 80%;
+	height: auto;
+	margin-bottom: 20px;
+	margin: 0 auto;
+
+}
+
+article{
+
+	margin-top: 40px;
+	margin-bottom: 90px;
+}
+
+
+
+article > h2{
+
+padding-bottom: 20px;
+
+}
+
+
+
+article > div.box > ul > li > img{
+	width: 80%;
+	height: 80%;
+	display: block;
+	float: none;
+	margin: 20px auto;
+}
+
+
+
+
+article > div.box > ul > li > h4{
+	width:80%;
+	height: auto;
+	color: #666;
+	font-size: 3vw;
+	line-height: 30px;
+
+	float: none;
+	margin: 0 auto;
+
+
+}
+
+
+
+div.aboutme > img{
+	width: 85%;
+	height: auto;
+	float: none;
+	margin: 30px auto;
+}
+
+div.textbox{
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	float: none;
+	margin: 0 auto;
+	text-align: left;
+
+}
+
+
+
+div.aboutme > div.textbox > h5 {
+	display: block;
+	overflow: hidden;
+	float: none;
+	border:none;	
+
+
+}
+
+div.aboutme > div.textbox > h5 > p {
+color: #999;
+font-size: 2vw;
+line-height: 30px;
+}
+
+footer > p {
+	display: block;
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+	color: #333;
+	font-size: 10px;
+	float: right;
+	text-align: right;	
+	padding: 20px 20px 20px 20px;
+
+	
+}
+
+
+	div.aboutme{
+	width: 100%;
+	height:auto;
+	background-color: #333;
+	overflow: hidden;
+	padding-bottom: 30px;
+
+}
+
+
+#app > header > nav.open{
+		height: 230px;
+	}
+
+
+#app > header > nav > div.menu {
+	clear: both;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+}
+
+#app > header > nav > div > a {
+	clear: both;
+	line-height: 50px;
+	font-size: 3.5vw;
+}
+
+article{
+
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 3px solid #666;
+
+}
+
+
+.text_p {
+
+
+	font-size: 4vw;
+
+	line-height: 40px;
+
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 350px) {
+
+
+}
