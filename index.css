@@ -588,7 +588,7 @@ footer > p {
 	display: block;
 	width: 55px;
 	height: 55px;
-	background-image: url('../sketch_webdesign/images/omenu.jpg');
+	background-image: url('./images/omenu.jpg');
 	background-repeat: no-repeat;
 	float: right;
 }
