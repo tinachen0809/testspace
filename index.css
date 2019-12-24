@@ -594,6 +594,9 @@ footer > p {
 
 
 
+
+
+
 .slider_container {
 	margin: 0 auto;
     width: 68%;
@@ -606,15 +609,15 @@ footer > p {
 
 
 
+
 	#app > header > nav > h1{
 	display: block;
 	overflow: hidden;
 	float: left;
-	padding: 20px 0 0 20px ;
+	padding: 10px 0 0 10px ;
 }
 
 	#app > header > nav > h1 > img{
-
 	height: auto;
 	width: 35%;
 	padding: 0 0 ;
@@ -630,6 +633,7 @@ footer > p {
 	background-image: url('./images/omenu.jpg');
 	background-repeat: no-repeat;
 	float: right;
+
 }
 
 #app > header > nav > div.menu {
