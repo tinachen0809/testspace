@@ -27,6 +27,14 @@ color:#fff;
 
 }
 
+
+a:active{
+
+color:#fff;
+background-color: #999;
+
+}
+
 /*加入backtotop*/
 
 
@@ -37,7 +45,7 @@ color:#fff;
     right: 0px;
     text-decoration: none;
     color: #000000;
-    background-color: rgba(235, 235, 235, 0.80);
+    background-color: rgba(235, 235, 235, 0.60);
     font-size: 12px;
     padding: 1em;
    
@@ -299,12 +307,6 @@ float: left;
 
 }
 
-footer > div.icon > a:visited{
-
-color:#fff;
-background-color: #999;
-
-}
 
 
 footer > div.icon > a > i {
@@ -324,7 +326,7 @@ footer > p {
 	font-size: 15px;
 	float: right;
 	text-align: right;	
-	padding: 20px 55px 20px 20px;
+	padding: 20px 65px 20px 20px;
 
 	
 }
