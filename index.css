@@ -164,7 +164,7 @@ article{
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	margin-top: 60px;
+	margin-top: 50px;
 	margin-bottom: 90px;
 	padding-bottom: 30px;
 	border-bottom: 3px solid #666;
@@ -175,9 +175,9 @@ article > h2{
 
 font-size: 3vw;
 color: #FFF;
-line-height: 70px;
+line-height: 220px;
 text-align: center;
-padding-bottom: 50px;
+
 
 }
 
