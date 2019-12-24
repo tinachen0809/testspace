@@ -27,7 +27,27 @@ color:#fff;
 
 }
 
+/*加入backtotop*/
 
+
+.back-to-top {
+    display:none;
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+   
+}
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+    text-decoration:none;
+    color:#ffffff;
+}
 
 
 /*加入戴入時的微動畫*/
@@ -304,7 +324,7 @@ footer > p {
 	font-size: 15px;
 	float: right;
 	text-align: right;	
-	padding: 20px 20px 20px 20px;
+	padding: 20px 55px 20px 20px;
 
 	
 }
@@ -688,7 +708,7 @@ div.textbox{
 	background-color: #333;
 	overflow: hidden;
 	padding-bottom: 30px;
-		margin-top: 450px;
+		margin-top: 420px;
 
 }
 
