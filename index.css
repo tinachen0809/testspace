@@ -21,19 +21,8 @@ img{
 	display: block;
 }
 
-a:visited{
-
-color:#fff;
-
-}
 
 
-a:active{
-
-color:#fff;
-background-color: #999;
-
-}
 
 /*加入backtotop*/
 
@@ -301,12 +290,38 @@ overflow: hidden;
 footer > div.icon {
 width: 40%;
 height: auto;
-color: #FFF;
-padding: 20px 20px 20px 20px;
+padding: 20px 10px 10px 10px;
 float: left;
 
 }
 
+
+footer > div.icon > a:link{
+color: #FFF;
+font-size: 20px;
+
+}
+
+
+footer > div.icon > a:hover {
+color: #FFF;
+font-size: 30px;
+
+}
+
+footer > div.icon > a:visited{
+
+color:#fff;
+
+}
+
+
+footer > div.icon > a:active{
+
+color:#fff;
+background-color: #999;
+
+}
 
 
 footer > div.icon > a > i {
