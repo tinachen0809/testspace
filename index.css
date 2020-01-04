@@ -136,7 +136,9 @@ div.bn > img {
 	margin-bottom: 50px;
 
 	/*加入戴入時的微動畫*/
-	animation: Animate1 .6s;
+	animation: flash;
+	animation-duration: 3s;
+	animation-iteration-count:0.5;
 
 
 
