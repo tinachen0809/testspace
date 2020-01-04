@@ -21,10 +21,31 @@ img{
 	display: block;
 }
 
-a:visited{
 
-color:#fff;
+
+
+/*加入backtotop*/
+
+
+.back-to-top {
+    display:none;
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.60);
+    font-size: 12px;
+    padding: 1em;
+   
 }
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+    text-decoration:none;
+    color:#ffffff;
+}
+
 
 /*加入戴入時的微動畫*/
 @keyframes Animate1 {
@@ -115,7 +136,9 @@ div.bn > img {
 	margin-bottom: 50px;
 
 	/*加入戴入時的微動畫*/
-	animation: Animate1 .6s;
+	animation: flash;
+	animation-duration: 3s;
+	animation-iteration-count:0.5;
 
 
 
@@ -143,7 +166,7 @@ article{
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	margin-top: 60px;
+	margin-top: 50px;
 	margin-bottom: 90px;
 	padding-bottom: 30px;
 	border-bottom: 3px solid #666;
@@ -154,9 +177,9 @@ article > h2{
 
 font-size: 3vw;
 color: #FFF;
-line-height: 70px;
+line-height: 220px;
 text-align: center;
-padding-bottom: 50px;
+
 
 }
 
@@ -269,11 +292,39 @@ overflow: hidden;
 footer > div.icon {
 width: 40%;
 height: auto;
-color: #FFF;
-padding: 20px 20px 20px 20px;
+padding: 20px 10px 10px 10px;
 float: left;
 
 }
+
+
+footer > div.icon > a:link{
+color: #FFF;
+font-size: 20px;
+
+}
+
+
+footer > div.icon > a:hover {
+color: #FFF;
+font-size: 30px;
+
+}
+
+footer > div.icon > a:visited{
+
+color:#fff;
+
+}
+
+
+footer > div.icon > a:active{
+
+color:#fff;
+background-color: #999;
+
+}
+
 
 footer > div.icon > a > i {
 
@@ -292,7 +343,7 @@ footer > p {
 	font-size: 15px;
 	float: right;
 	text-align: right;	
-	padding: 20px 20px 20px 20px;
+	padding: 20px 65px 20px 20px;
 
 	
 }
@@ -303,7 +354,7 @@ footer > p {
 
 .slider_container {
 	margin: 0 auto;
-    width: 500px;
+    width: 35%;
     height: auto;
     position: relative;
     background-color: #f5f5f5;
@@ -329,7 +380,7 @@ footer > p {
 	text-align: center;
 	line-height: 60px;
 
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .slider_container div {
@@ -339,9 +390,6 @@ footer > p {
     left: 0;
     opacity: 0;
     filter: alpha(opacity:0);
-
-
-
 }
 
 
@@ -414,38 +462,6 @@ footer > p {
 }
 
 
-.slider_container span {    
-    color: #fff;
-    background: #000;
-    position: absolute;
-    left: 0%;
-    top: 310px;
-    width: 400px;
-    height: 50px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
-
-
-    -webkit-transform:scaleY(0);
-        -ms-transform:scaleY(0);
-            transform:scaleY(0);
-    -webkit-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-}
-
-.slider_container:hover span {
-    width: 100%;
-    -webkit-transform:scaleY(1);
-        -ms-transform:scaleY(1);
-            transform:scaleY(1);
-}
-
-
-.slider_container:hover div {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-}
 
 /*輪播圖片效果*/
 
@@ -456,6 +472,18 @@ footer > p {
 
 
 @media screen and (max-width: 1025px) {
+
+
+	.slider_container {
+	margin: 0 auto;
+    width: 60%;
+    height: auto;
+    position: relative;
+    background-color: #f5f5f5;
+
+
+}
+
 
 
 	#app > header > nav > h1 > img{
@@ -564,19 +592,34 @@ footer > p {
 
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 715px) {
+
+
+
+
+
+
+.slider_container {
+	margin: 0 auto;
+    width: 68%;
+    height: auto;
+    position: relative;
+    background-color: #f5f5f5;
+
+
+}
+
+
 
 
 	#app > header > nav > h1{
 	display: block;
 	overflow: hidden;
 	float: left;
-	padding: 20px 0 0 20px ;
+	padding: 10px 0 0 10px ;
 }
 
 	#app > header > nav > h1 > img{
-	position:absolute;  /* 把logo的階層設在最上*/
-	z-index:999; 
 	height: auto;
 	width: 35%;
 	padding: 0 0 ;
@@ -589,9 +632,10 @@ footer > p {
 	display: block;
 	width: 55px;
 	height: 55px;
-	background-image: url('/sketch_webdesign/images/omenu.png');
+	background-image: url('./images/omenu.jpg');
 	background-repeat: no-repeat;
 	float: right;
+
 }
 
 #app > header > nav > div.menu {
@@ -669,13 +713,6 @@ article > div.box > ul > li > h4{
 
 
 
-div.aboutme > img{
-	width: 85%;
-	height: auto;
-	float: none;
-	margin: 30px auto;
-}
-
 div.textbox{
 	overflow: hidden;
 	width: 100%;
@@ -684,6 +721,26 @@ div.textbox{
 	margin: 0 auto;
 	text-align: left;
 
+}
+
+
+
+	div.aboutme{
+	width: 100%;
+	height:auto;
+	background-color: #333;
+	overflow: hidden;
+	padding-bottom: 30px;
+		margin-top: 420px;
+
+}
+
+
+div.aboutme > img{
+	width: 85%;
+	height: auto;
+	float: none;
+	margin: 30px auto;
 }
 
 
@@ -699,7 +756,7 @@ div.aboutme > div.textbox > h5 {
 
 div.aboutme > div.textbox > h5 > p {
 color: #999;
-font-size: 2vw;
+font-size: 3vw;
 line-height: 30px;
 }
 
@@ -718,14 +775,7 @@ footer > p {
 }
 
 
-	div.aboutme{
-	width: 100%;
-	height:auto;
-	background-color: #333;
-	overflow: hidden;
-	padding-bottom: 30px;
 
-}
 
 
 #app > header > nav.open{
@@ -766,8 +816,3 @@ article{
 	margin-bottom: 20px;
 }
 
-
-@media screen and (max-width: 350px) {
-
-
-}
